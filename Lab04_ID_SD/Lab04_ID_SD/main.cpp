@@ -8,8 +8,8 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
+int main() {
     // insert code here...
-    std::cout << "Hello, lab4!\n";
+    std::cout << "Hello, lab4sudhirishaan on 30th!\n";
     return 0;
 }
