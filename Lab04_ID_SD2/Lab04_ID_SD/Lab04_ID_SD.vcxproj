@@ -138,11 +138,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Currency.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedNode.h" />
     <ClInclude Include="Queue.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Currency.cpp" />
     <ClCompile Include="Lab04_ID_SD.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Queue.cpp" />
