@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{52829B0B-AD90-4426-9E50-34BA3542577F}</ProjectGuid>
+    <ProjectGuid>{43F43F03-1371-438C-BD67-1A75E34D19A8}</ProjectGuid>
     <RootNamespace>Lab04IDSD</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -138,7 +138,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="README.txt" />
+    <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="LinkedNode.h" />
+    <ClInclude Include="Queue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Lab04_ID_SD.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="Queue.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
