@@ -33,6 +33,7 @@ bool Currency::operator>(Currency& right) {
 		}
 		return status;
 	}
+    return false;
 }
 
 
@@ -50,6 +51,7 @@ bool Currency::operator<(Currency& right) {
 		}
 		return status;
 	}
+    return false;
 }
 
 

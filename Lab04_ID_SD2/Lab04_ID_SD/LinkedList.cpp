@@ -1,49 +1,62 @@
 #include "LinkedList.h"
 
 /*Constructors & Destructors*/
-LinkedList::LinkedList() {
+template <typename T>
+LinkedList<T>::LinkedList() {
 	createNewList();
 }
-LinkedList::~LinkedList() {
+template <typename T>
+LinkedList<T>::~LinkedList() {
 
 }
 
 /*Getter and setter functions*/
-int LinkedList::getCounter() {
+template <typename T>
+int LinkedList<T>::getCounter() {
 	return counter;
 }
-void LinkedList::setCounter() {
+template <typename T>
+void LinkedList<T>::setCounter() {
 	counter++;
 }
-void LinkedList::decrementCounter() {
+template <typename T>
+void LinkedList<T>::decrementCounter() {
 	counter--;
 }
-LinkedNode* LinkedList::getStart() {
+template <typename T>
+LinkedNode<T> * LinkedList<T>::getStart() {
 	return start;
 }
-void LinkedList::setStart(LinkedNode* node) {
+template <typename T>
+void LinkedList<T>::setStart(LinkedNode<T>* node) {
 	start = node;
 }
-int LinkedList::getStartValue() {
+template <typename T>
+int LinkedList<T>::getStartValue() {
 	return start->data;
 }
-LinkedNode* LinkedList::getEnd() {
+template <typename T>
+LinkedNode<T> * LinkedList<T>::getEnd() {
 	return end;
 }
-void LinkedList::setEnd(LinkedNode* node) {
+template <typename T>
+void LinkedList<T>::setEnd(LinkedNode<T> * node) {
 	end = node;
 }
-int LinkedList::getEndValue() {
+template <typename T>
+int LinkedList<T>::getEndValue() {
 	return end->data;
 }
 
 /*Functions*/
-void LinkedList::createNewList() {
+template <typename T>
+void LinkedList<T>::createNewList() {
 	start = NULL;
 	end = NULL;
 	counter = 0;
 }
-void LinkedList::addData(LinkedNode *ptrToAddNode)
+template <typename T>
+void LinkedList<T>::addData(LinkedNode<T> *ptrToAddNode)
 {
 	if (start == NULL && end == NULL) {
 		std::cout << "Adding first element:" << std::endl;
@@ -58,10 +71,11 @@ void LinkedList::addData(LinkedNode *ptrToAddNode)
 		counter++;
 	}	
 }
-void LinkedList::deleteData(int del) {
+template <typename T>
+void LinkedList<T>::deleteData(T del) {
 	//FUNCTION FAILS WHEN YOU ENTER A VALUE THAT DOESN'T EXIST.
-	LinkedNode* traversal = start;
-	LinkedNode* previous;
+	LinkedNode<T> * traversal = start;
+	LinkedNode<T> * previous;
 
 	if (traversal->data == del) {
 		start = traversal->next;
@@ -81,9 +95,10 @@ void LinkedList::deleteData(int del) {
 	}
 	
 }
-void LinkedList::destroyList() {
+template <typename T>
+void LinkedList<T>::destroyList() {
 	while (start != NULL) {
-		LinkedNode* previous = new LinkedNode;
+		LinkedNode<T> * previous = new LinkedNode<T>;
 		previous = start;
 		start = start->next;
 		delete previous;
@@ -91,8 +106,9 @@ void LinkedList::destroyList() {
 	}
 	createNewList();
 }
-LinkedNode* LinkedList::findData(int datum) {
-	LinkedNode* finder = start;
+template <typename T>
+LinkedNode<T> * LinkedList<T>::findData(T datum) {
+	LinkedNode<T> * finder = start;
 	while (finder != NULL) {
 		if (finder->data == datum) {
 			return finder;
@@ -101,10 +117,12 @@ LinkedNode* LinkedList::findData(int datum) {
 	}
 	return NULL;
 }
-int LinkedList::countDataItems() { //IS THIS CORRECT?
+template <typename T>
+int LinkedList<T>::countDataItems() { //IS THIS CORRECT?
 	return getCounter();
 }
-bool LinkedList::isListEmpty() {
+template <typename T>
+bool LinkedList<T>::isListEmpty() {
 	if (start == NULL && end == NULL) {
 		return 1;
 	}
@@ -112,8 +130,9 @@ bool LinkedList::isListEmpty() {
 		return 0;
 	}
 }
-void LinkedList::printList() {
-	LinkedNode* printer = start;
+template <typename T>
+void LinkedList<T>::printList() {
+	LinkedNode<T> * printer = start;
 	while (printer!= NULL) {
 		std::cout << printer->data << " " << std::endl;
 		printer = printer->next;

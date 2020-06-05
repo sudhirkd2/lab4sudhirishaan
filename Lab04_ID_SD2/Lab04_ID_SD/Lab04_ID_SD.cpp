@@ -1,19 +1,21 @@
 #include "LinkedList.h"
+#include "LinkedList.cpp"
 #include "Queue.h"
+#include "Queue.cpp"
 #include "Currency.h"
 #include <iostream>
 using namespace std;
 int main() {
-	/*LinkedList myList;
+	LinkedList<int> myList;
 	//ADD NODE FUNCTION
 	for (int i = 0; i < 5; i++) {
-		LinkedNode* ptrToAddNode = new LinkedNode;
+		LinkedNode<int>* ptrToAddNode = new LinkedNode<int>;
 		std::cout << "Enter value of new node to add: ";
 		std::cin >> ptrToAddNode->data;
 		myList.addData(ptrToAddNode);
-	}*/
+	}
 	cout << "WELCOME TO SUDHIR ISHAAN'S PROJECT" << endl;
-	//myList.printList();
+	myList.printList();
 
 	//DELETE FUNCTION
 	/*int del;
@@ -58,9 +60,9 @@ int main() {
 	//cout<<"End Value: "<<myList.getEndValue()<<endl;
 	//cout << "Start Value: " << myList.getStartValue() << endl;
 
-	Queue query;
+	Queue<int> query;
 	for (int i = 0; i < 5; i++) {
-		LinkedNode* test = new LinkedNode;
+		LinkedNode<int>* test = new LinkedNode<int>;
 		cout << "Enter value: ";
 		cin >> test->data;
 		query.enqueue(test);

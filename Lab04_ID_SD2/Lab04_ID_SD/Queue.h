@@ -2,16 +2,18 @@
 #ifndef QUEUE
 #define QUEUE
 #include "LinkedList.h"
-class Queue:protected LinkedList {
+
+template <typename T>
+class Queue:protected LinkedList<T> {
 public:
-	Queue();
-	~Queue();
+	Queue<T>();
+	~Queue<T>();
 	
 	void createQueue();
-	void enqueue(LinkedNode *);
-	LinkedNode* dequeue();
-	LinkedNode* peekFront();
-	LinkedNode* peekRear();
+	void enqueue(LinkedNode<T> *);
+	LinkedNode<T> * dequeue();
+	LinkedNode<T> * peekFront();
+	LinkedNode<T> * peekRear();
 	void destroyQueue();
 	void printQueue();
 };

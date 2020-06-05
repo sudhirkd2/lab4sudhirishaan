@@ -3,29 +3,31 @@
 #define LINKEDLIST_H
 #include "LinkedNode.h"
 #include <iostream>
+
+template <typename T>
 class LinkedList {
 private:
 	int counter;
-	LinkedNode* start;
-	LinkedNode* end;
+	LinkedNode<T> * start;
+	LinkedNode<T>* end;
 public:
-	LinkedList(); //DONE
-	~LinkedList(); 
+	LinkedList<T>(); //DONE
+	~LinkedList<T>();
 
 	int getCounter();
 	void setCounter();
 	void decrementCounter();
-	LinkedNode* getStart();
+	LinkedNode<T> * getStart();
 	int getStartValue();
-	void setStart(LinkedNode*);
-	LinkedNode* getEnd();
-	void setEnd(LinkedNode*);
+	void setStart(LinkedNode<T> *);
+	LinkedNode<T> * getEnd();
+	void setEnd(LinkedNode<T> *);
 	int getEndValue();
 
 	void createNewList(); //DONE
-	void addData(LinkedNode*); //DONE
-	void deleteData(int);
-	LinkedNode* findData(int); 
+	void addData(LinkedNode<T>* node); //DONE
+	void deleteData(T);
+	LinkedNode<T> * findData(T);
 	int countDataItems();
 	bool isListEmpty();
 	void destroyList();

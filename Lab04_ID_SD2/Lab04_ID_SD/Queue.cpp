@@ -1,16 +1,21 @@
 #include "Queue.h"
 //Constructors & Destructors
-Queue::Queue(){
+
+template <typename T>
+Queue<T>::Queue(){
 	createQueue();
 }
-Queue::~Queue() {
+template <typename T>
+Queue<T>::~Queue() {
 }
 
 //Functions
-void Queue::createQueue() {
+template <typename T>
+void Queue<T>::createQueue() {
 	this->createNewList();
 }
-void Queue::enqueue(LinkedNode *ptrToAddNode) {
+template <typename T>
+void Queue<T>::enqueue(LinkedNode<T> *ptrToAddNode) {
 	/*if (start == NULL && end == NULL) {
 		std::cout << "Adding first element:" << std::endl;
 		ptrToAddNode->next = NULL;
@@ -23,50 +28,55 @@ void Queue::enqueue(LinkedNode *ptrToAddNode) {
 		start = ptrToAddNode;
 		counter++;
 	}*/
-	if (getStart() == NULL && getEnd() == NULL) {
+	if (this->getStart() == NULL && this->getEnd() == NULL) {
 		ptrToAddNode->next = NULL;
-		setStart(ptrToAddNode);
-		setEnd(ptrToAddNode);
-		setCounter();
+		this->setStart(ptrToAddNode);
+		this->setEnd(ptrToAddNode);
+		this->setCounter();
 	}
 	else {
 		ptrToAddNode->next = NULL;
-		getEnd()->next = ptrToAddNode;
-		setEnd(ptrToAddNode);
-		setCounter();
+		this->getEnd()->next = ptrToAddNode;
+		this->setEnd(ptrToAddNode);
+		this->setCounter();
 	}
 	
 }
 
-LinkedNode* Queue::dequeue() {
-	if (getStart() == NULL && getEnd() == NULL) {
+template <typename T>
+LinkedNode<T> * Queue<T>::dequeue() {
+	if (this->getStart() == NULL && this->getEnd() == NULL) {
 		return NULL;
 	}
-	LinkedNode* returnTemp = new LinkedNode;
-	returnTemp=getStart();
+	LinkedNode<T> * returnTemp = new LinkedNode<T>;
+	returnTemp=this->getStart();
 	
-	if (getStart()->next == NULL) {
-		setStart(NULL);
-		setEnd(NULL);
-		decrementCounter();
+	if (this->getStart()->next == NULL) {
+		this->setStart(NULL);
+		this->setEnd(NULL);
+		this->decrementCounter();
 		return returnTemp;
 	}
 
-	setStart(getStart()->next);
+	this->setStart(this->getStart()->next);
 	returnTemp->next = NULL;
 	delete returnTemp->next;
 	return returnTemp;
 }
-LinkedNode* Queue::peekFront() {
+template <typename T>
+LinkedNode<T> * Queue<T>::peekFront() {
 	return this->getStart();
 }
-LinkedNode* Queue::peekRear() {
+template <typename T>
+LinkedNode<T> * Queue<T>::peekRear() {
 	return this->getEnd();
 }
-void Queue::destroyQueue() {
+template <typename T>
+void Queue<T>::destroyQueue() {
 	this->destroyList();
 }
-void Queue::printQueue() {
+template <typename T>
+void Queue<T>::printQueue() {
 	this->printList();
 }
 
