@@ -27,6 +27,21 @@
     <ClInclude Include="Currency.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Dollar.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Pound.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Real.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Rupee.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Yen.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab04_ID_SD.cpp">
@@ -39,6 +54,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Currency.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Dollar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Pound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Real.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Rupee.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Yen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

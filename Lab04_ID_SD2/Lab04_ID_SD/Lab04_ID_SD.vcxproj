@@ -138,12 +138,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Dollar.h" />
+    <ClInclude Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Pound.h" />
+    <ClInclude Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Real.h" />
+    <ClInclude Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Rupee.h" />
+    <ClInclude Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Yen.h" />
     <ClInclude Include="Currency.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedNode.h" />
     <ClInclude Include="Queue.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Dollar.cpp" />
+    <ClCompile Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Pound.cpp" />
+    <ClCompile Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Real.cpp" />
+    <ClCompile Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Rupee.cpp" />
+    <ClCompile Include="..\..\..\source\repos\Lab1A_ID\Lab1A_ID\Yen.cpp" />
     <ClCompile Include="Currency.cpp" />
     <ClCompile Include="Lab04_ID_SD.cpp" />
     <ClCompile Include="LinkedList.cpp" />

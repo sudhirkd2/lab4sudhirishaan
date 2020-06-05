@@ -1,5 +1,6 @@
 #include "LinkedList.h"
 #include "Queue.h"
+#include "Currency.h"
 #include <iostream>
 using namespace std;
 int main() {
@@ -11,7 +12,7 @@ int main() {
 		std::cin >> ptrToAddNode->data;
 		myList.addData(ptrToAddNode);
 	}*/
-
+	cout << "WELCOME TO SUDHIR ISHAAN'S PROJECT" << endl;
 	//myList.printList();
 
 	//DELETE FUNCTION
