@@ -21,6 +21,7 @@ class Stack : protected LinkedList<T> {
     LinkedNode<T> * pop();
     LinkedNode<T> * peek();
     void destroyStack();
+    bool isEmpty();
 };
 
 template <typename T>
@@ -53,6 +54,10 @@ LinkedNode<T> * Stack<T>::peek() {
 template <typename T>
 void Stack<T>::destroyStack() {
     this->destroyList();
+}
+template <typename T>
+bool Stack<T>::isEmpty() {
+    return this->isListEmpty();
 }
 #endif /* Stack_h */
 

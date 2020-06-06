@@ -79,7 +79,10 @@ template <typename T>
 void Queue<T>::printQueue() {
 	this->printList();
 }
-
+template <typename T>
+bool Queue<T>::isEmpty() {
+    return this->isListEmpty();
+}
 
 
 

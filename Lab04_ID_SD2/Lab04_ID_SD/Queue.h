@@ -16,6 +16,7 @@ public:
 	LinkedNode<T> * peekRear();
 	void destroyQueue();
 	void printQueue();
+    bool isEmpty();
 };
 #endif // !QUEUE
 
