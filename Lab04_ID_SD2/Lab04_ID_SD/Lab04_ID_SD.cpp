@@ -2,20 +2,21 @@
 #include "LinkedList.cpp"
 #include "Queue.h"
 #include "Queue.cpp"
+#include "Stack.h"
 #include "Currency.h"
 #include <iostream>
 using namespace std;
 int main() {
-	LinkedList<int> myList;
-	//ADD NODE FUNCTION
-	for (int i = 0; i < 5; i++) {
-		LinkedNode<int>* ptrToAddNode = new LinkedNode<int>;
-		std::cout << "Enter value of new node to add: ";
-		std::cin >> ptrToAddNode->data;
-		myList.addData(ptrToAddNode);
-	}
+//	LinkedList<int> myList;
+//	//ADD NODE FUNCTION
+//	for (int i = 0; i < 5; i++) {
+//		LinkedNode<int>* ptrToAddNode = new LinkedNode<int>;
+//		std::cout << "Enter value of new node to add: ";
+//		std::cin >> ptrToAddNode->data;
+//		myList.addData(ptrToAddNode);
+//	}
 	cout << "WELCOME TO SUDHIR ISHAAN'S PROJECT" << endl;
-	myList.printList();
+//	myList.printList();
 
 	//DELETE FUNCTION
 	/*int del;
@@ -60,21 +61,38 @@ int main() {
 	//cout<<"End Value: "<<myList.getEndValue()<<endl;
 	//cout << "Start Value: " << myList.getStartValue() << endl;
 
-	Queue<int> query;
-	for (int i = 0; i < 5; i++) {
-		LinkedNode<int>* test = new LinkedNode<int>;
-		cout << "Enter value: ";
-		cin >> test->data;
-		query.enqueue(test);
-	}
-	query.printQueue();
-	cout << "Dequeing" << endl;
+//	Queue<int> query;
+//	for (int i = 0; i < 5; i++) {
+//		LinkedNode<int>* test = new LinkedNode<int>;
+//		cout << "Enter value: ";
+//		cin >> test->data;
+//		query.enqueue(test);
+//	}
+//	query.printQueue();
+//	cout << "Dequeing" << endl;
+//
+//	for (int i = 0; i < 3; i++) {
+//		query.dequeue();
+//	}
+//
+//	query.printQueue();
+    cout << "Testing stack " << endl;
+    Stack<int> stack;
+    for (int i = 0; i < 5; i++) {
+        LinkedNode<int>* test = new LinkedNode<int>;
+        cout << "Enter value: ";
+        cin >> test->data;
+        stack.push(test);
+    }
+    stack.printStack();
+    cout << "popping" << endl;
 
-	for (int i = 0; i < 3; i++) {
-		query.dequeue();
-	}
+    for (int i = 0; i < 3; i++) {
+        cout << "popping " << stack.pop()->data << endl;
+    }
 
-	query.printQueue();
+    cout << "Printing stack" << endl;
+    stack.printStack();
 
 	return 0;
 }
